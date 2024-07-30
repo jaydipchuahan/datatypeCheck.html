@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Type Check</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        #txt {
+            margin-bottom: 10px;
+            width: 400px;
+            border-radius: 10px;
+            outline: none;
+            border: 1px solid #0000004d;
+            box-shadow: 0 0 10px rgba(170, 170, 170, 0.123);
+            padding: 6px 10px 6px 15px;
+            font-size: 22px;
+
+        }
+
+        button {
+            cursor: pointer;
+            width: 200px;
+            /* border: 1px solid rgb(255, 232, 232); */
+            border-radius: 20px;
+            background-color: lightblue;
+            color: white;
+            font-size: 22px;
+            padding: 5px 10px;
+            transition: .5s all ease;
+        }
+
+        label {
+            color: red;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="txt">
+    <button onclick="ChackDataType()">Submit</button>
+    <label for="txt" class="label"></label>
+
+    <script>
+        function ChackDataType() {
+            let inputNu = document.querySelector("#txt").value;
+            let In = document.querySelector("#txt").value;
+            let a = parseInt(inputNu);
+
+            if ( a === a) {
+                document.querySelector(".label").innerText = "";
+            } else {
+                document.querySelector(".label").innerText = "Try Again.....!";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
